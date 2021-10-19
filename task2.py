@@ -42,3 +42,8 @@ if __name__ == "__main__":
     t30.to_csv(f"{csv_filename1}.csv", index=False)
     t31.to_csv(f"{csv_filename2}.csv", index=False)
     t32.to_csv(f"{csv_filename3}.csv", index=False)
+
+    with ZipFile('Teste_Intuitive_Care_Paulo_Victor_P_Coelho.zip', 'w') as zip:
+        zip.write(f"{csv_filename1}.csv")
+        zip.write(f"{csv_filename2}.csv")
+        zip.write(f"{csv_filename3}.csv")
