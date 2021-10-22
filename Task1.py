@@ -33,7 +33,7 @@ if __name__ == "__main__":
     soup=parse_html(accessed_page.text)
     # Get the pdf link located in the second page accessed
     pdf_url = select_first_url(soup, "btn btn-primary btn-sm center-block internal-link")
-    filename=pdf_url.split('/')[-1]
+    filename="output/"+pdf_url.split('/')[-1]
     # Download the pdf file to the local path
     download_file(pdf_url, filename)
     

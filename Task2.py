@@ -33,9 +33,9 @@ if __name__ == "__main__":
     pdf_file='padrao_tiss_componente_organizacional_202108.pdf'
     pgs_to_read="108-114"
     table_list=tabula.read_pdf(pdf_file, pages=pgs_to_read)
-    csv_filename1 = table_list[0].columns[-1]
-    csv_filename2 = table_list[1].columns[-1]
-    csv_filename3 = table_list[-1].columns[-1]
+    csv_filename1 = "output/"+table_list[0].columns[-1]
+    csv_filename2 = "output/"+table_list[1].columns[-1]
+    csv_filename3 = "output/"+table_list[-1].columns[-1]
 
     t30 = data_table_processing(table_list[0])
     t31 = data_table_processing(table_list[1:len(table_list)-1])
@@ -45,7 +45,7 @@ if __name__ == "__main__":
     t31.to_csv(f"{csv_filename2}.csv", index=False)
     t32.to_csv(f"{csv_filename3}.csv", index=False)
 
-    with ZipFile('Teste_Intuitive_Care_Paulo_Victor_P_Coelho.zip', 'w') as zip:
+    with ZipFile('output/Teste_Intuitive_Care_Paulo_Victor_P_Coelho.zip', 'w') as zip:
         zip.write(f"{csv_filename1}.csv")
         zip.write(f"{csv_filename2}.csv")
         zip.write(f"{csv_filename3}.csv")
