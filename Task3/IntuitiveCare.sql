@@ -1,5 +1,4 @@
 SET GLOBAL local_infile=1;
-# set names utf8;
 
 CREATE DATABASE IF NOT EXISTS IntuitiveCare;
 USE IntuitiveCare;
@@ -133,3 +132,23 @@ IGNORE 1 ROWS
 (@DATA,REG_ANS, CD_CONTA_CONTABIL, DESCRICAO, @VL_SALDO_FINAL)
 SET DATA = STR_TO_DATE(@DATA, '%d/%m/%Y'),
 VL_SALDO_FINAL = replace(@VL_SALDO_FINAL, ',', '.');
+
+SELECT Registro_ANS, Razao_Social, Nome_Fantasia, `DATA`, DESCRICAO, SUM(VL_SALDO_FINAL) AS saldo_total
+FROM relatorio_operadoras
+JOIN demonstracoes_contabeis AS dcont
+ON Registro_ANS = REG_ANS
+WHERE DESCRICAO = "EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR "
+AND `DATA` >= "2020-01-01"
+GROUP BY Registro_ANS
+ORDER BY saldo_total DESC
+LIMIT 10;
+
+SELECT Registro_ANS, Razao_Social, Nome_Fantasia, `DATA`, DESCRICAO, SUM(VL_SALDO_FINAL) AS saldo_total
+FROM relatorio_operadoras
+JOIN demonstracoes_contabeis AS dcont
+ON Registro_ANS = REG_ANS
+WHERE DESCRICAO = "EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR "
+AND `DATA` BETWEEN "2020-10-01" AND "2020-12-31"
+GROUP BY Registro_ANS
+ORDER BY saldo_total DESC
+LIMIT 10;
