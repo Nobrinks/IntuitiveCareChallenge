@@ -1,11 +1,20 @@
 # IntuitiveChallenge
 
 ## Intallation
-1. Before start running the two first programs, it is required you have [Python](https://www.python.org/downloads/) installed.
-2. After installed, open your terminal, copy and paste the following line
+1. antes de começar a executar os primeiros dois programas, é preciso ter o [Python](https://www.python.org/downloads/) instalado.
+2. Após instalar, abra o terminal, copie e cole o comando a seguir
 
     `pip install pandas beautifulsoup4 requests tabula-py`          
-3. Install [MySQL8](https://dev.mysql.com/downloads/mysql/) to execute the script in the Task3 folder.
+3. Instale o [MySQL8](https://dev.mysql.com/downloads/mysql/) para executar o script na pasta `Task3`.
 
-## Outputs
-The files created and used by `Task1.py` and `Task2.py` are redirected to the folder `output`.
+4. Para usar o script é necessário alterar o path nos comandos `LOAD` para o correspondente à maquina que se está utilizando.  
+
+## Saída dos programas
+Os arquivos criados e usados por `Task1.py` e `Task2.py` são direcionados para a pasta `output`.
+
+## Reposta das perguntas do Teste 3
+
+### - Quais as 10 operadoras que mais tiveram despesas com "EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR" no último trimestre?
+![10 empresas com mais despesas no último trimestre](images/mais_despesa_ultimo_trimestre.png)
+### - Quais as 10 operadoras que mais tiveram despesas com "EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR" no último ano?
+![10 empresas com mais despesas no último ano](images/mais_despesa_ultimo_ano.png)
