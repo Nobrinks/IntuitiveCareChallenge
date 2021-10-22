@@ -1,7 +1,7 @@
 # IntuitiveChallenge
 
 ## Intallation
-1. antes de começar a executar os primeiros dois programas, é preciso ter o [Python](https://www.python.org/downloads/) instalado.
+1. Antes de começar a executar os primeiros dois programas, é preciso ter o [Python](https://www.python.org/downloads/) instalado.
 2. Após instalar, abra o terminal, copie e cole o comando a seguir
 
     `pip install pandas beautifulsoup4 requests tabula-py`          
