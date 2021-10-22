@@ -6,3 +6,6 @@
 
     `pip install pandas beautifulsoup4 requests tabula-py`          
 3. Install [MySQL8](https://dev.mysql.com/downloads/mysql/) to execute the script in the Task3 folder.
+
+## Outputs
+The files created and used by `Task1.py` and `Task2.py` are redirected to the folder `output`.
