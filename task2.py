@@ -1,6 +1,7 @@
 import pandas as pd
 import tabula
 from zipfile import ZipFile
+
 def data_table_processing(tables):
   if isinstance(tables, list):
     return large_table(tables)
@@ -16,6 +17,7 @@ def single_table(table):
   table = table.dropna(subset=table.columns, axis=0)
   table = table[1:]
   return table
+  
 def large_table(table_list):
   table_list[0].columns = table_list[0].iloc[0] # first line of the table will be the header
   table_list[0] = table_list[0][1:] # removing the repeated line, which now is the header
