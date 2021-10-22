@@ -35,7 +35,7 @@ VL_SALDO_FINAL DECIMAL(15, 2),
 CONSTRAINT Fk_registro FOREIGN KEY (REG_ANS) REFERENCES Relatorio_Operadoras(Registro_ANS)
 )CHARACTER SET utf8mb4;
 
-LOAD DATA LOCAL INFILE 'C:/Users/pvict/IntuitiveChallenge/Task3/datasource/Relatorio_cadop.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/pvict/IntuitiveCareChallenge/Task3/datasource/Relatorio_cadop.csv'
 INTO TABLE Relatorio_Operadoras
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ';'
@@ -45,7 +45,7 @@ IGNORE 3 ROWS
 (Registro_ANS, CNPJ, Razao_Social, Nome_Fantasia, Modalidade, Logradouro, Numero, Complemento, Bairro, Cidade, UF, CEP, DDD, Telefone, Fax, Endereco_eletronico, Representante, Cargo_Representante, @Data_Registro_ANS)
 SET Data_Registro_ANS = STR_TO_DATE(@Data_Registro_ANS, '%d/%m/%Y');
 
-LOAD DATA LOCAL INFILE 'C:/Users/pvict/IntuitiveChallenge/Task3/datasource/1T2019.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/pvict/IntuitiveCareChallenge/Task3/datasource/1T2019.csv'
 INTO TABLE Demonstracoes_Contabeis
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ';'
@@ -56,7 +56,7 @@ IGNORE 1 ROWS
 SET DATA = STR_TO_DATE(@DATA, '%d/%m/%Y'),
 VL_SALDO_FINAL = replace(@VL_SALDO_FINAL, ',', '.');
 
-LOAD DATA LOCAL INFILE 'C:/Users/pvict/IntuitiveChallenge/Task3/datasource/2T2019.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/pvict/IntuitiveCareChallenge/Task3/datasource/2T2019.csv'
 INTO TABLE Demonstracoes_Contabeis
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ';'
@@ -67,7 +67,7 @@ IGNORE 1 ROWS
 SET DATA = STR_TO_DATE(@DATA, '%d/%m/%Y'),
 VL_SALDO_FINAL = replace(@VL_SALDO_FINAL, ',', '.');
 
-LOAD DATA LOCAL INFILE 'C:/Users/pvict/IntuitiveChallenge/Task3/datasource/3T2019.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/pvict/IntuitiveCareChallenge/Task3/datasource/3T2019.csv'
 INTO TABLE Demonstracoes_Contabeis
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ';'
@@ -78,7 +78,7 @@ IGNORE 1 ROWS
 SET DATA = STR_TO_DATE(@DATA, '%d/%m/%Y'),
 VL_SALDO_FINAL = replace(@VL_SALDO_FINAL, ',', '.');
 
-LOAD DATA LOCAL INFILE 'C:/Users/pvict/IntuitiveChallenge/Task3/datasource/4T2019.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/pvict/IntuitiveCareChallenge/Task3/datasource/4T2019.csv'
 INTO TABLE Demonstracoes_Contabeis
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ';'
@@ -89,7 +89,7 @@ IGNORE 1 ROWS
 SET DATA = STR_TO_DATE(@DATA, '%d/%m/%Y'),
 VL_SALDO_FINAL = replace(@VL_SALDO_FINAL, ',', '.');
 
-LOAD DATA LOCAL INFILE 'C:/Users/pvict/IntuitiveChallenge/Task3/datasource/1T2020.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/pvict/IntuitiveCareChallenge/Task3/datasource/1T2020.csv'
 INTO TABLE Demonstracoes_Contabeis
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ';'
@@ -100,7 +100,7 @@ IGNORE 1 ROWS
 SET DATA = STR_TO_DATE(@DATA, '%d/%m/%Y'),
 VL_SALDO_FINAL = replace(@VL_SALDO_FINAL, ',', '.');
 
-LOAD DATA LOCAL INFILE 'C:/Users/pvict/IntuitiveChallenge/Task3/datasource/2T2020.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/pvict/IntuitiveCareChallenge/Task3/datasource/2T2020.csv'
 INTO TABLE Demonstracoes_Contabeis
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ';'
@@ -111,7 +111,7 @@ IGNORE 1 ROWS
 SET DATA = STR_TO_DATE(@DATA, '%d/%m/%Y'),
 VL_SALDO_FINAL = replace(@VL_SALDO_FINAL, ',', '.');
 
-LOAD DATA LOCAL INFILE 'C:/Users/pvict/IntuitiveChallenge/Task3/datasource/3T2020.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/pvict/IntuitiveCareChallenge/Task3/datasource/3T2020.csv'
 INTO TABLE Demonstracoes_Contabeis
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ';'
@@ -122,7 +122,7 @@ IGNORE 1 ROWS
 SET DATA = STR_TO_DATE(@DATA, '%d/%m/%Y'),
 VL_SALDO_FINAL = replace(@VL_SALDO_FINAL, ',', '.');
 
-LOAD DATA LOCAL INFILE 'C:/Users/pvict/IntuitiveChallenge/Task3/datasource/4T2020.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/pvict/IntuitiveCareChallenge/Task3/datasource/4T2020.csv'
 INTO TABLE Demonstracoes_Contabeis
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ';'
